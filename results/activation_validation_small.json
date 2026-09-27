@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "model_configuration": {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "tokenizer_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "selected_hidden_state_indices": [
+      10,
+      18,
+      26
+    ],
+    "expected_hidden_dimension": 1536,
+    "max_new_tokens": 80,
+    "temperature": null,
+    "top_p": null,
+    "do_sample": false,
+    "random_seed": 42,
+    "device": "cuda if available, otherwise cpu",
+    "dtype": "float16 on CUDA, float32 on CPU",
+    "extraction_method": "HuggingFace hidden states: output_hidden_states=True"
+  },
+  "extraction_method": "HuggingFace hidden states (NOT TransformerLens)",
+  "validation_count": 5,
+  "results": [
+    {
+      "Prompt_ID": 588,
+      "Generated_Response": "Dreams can reveal our unconscious thoughts, desires, fears, and memories. They provide insight into our psychological states and can be used to understand ourselves better.",
+      "Generated_Token_Count": 32,
+      "Activation_Shapes": {
+        "10": [
+          32,
+          1536
+        ],
+        "18": [
+          32,
+          1536
+        ],
+        "26": [
+          32,
+          1536
+        ]
+      },
+      "Token_Activation_Alignment_OK": true,
+      "Hidden_Dimension_OK": true,
+      "NaN_Inf_Check_OK": true,
+      "Prompt_ID_Check_OK": true,
+      "Model_Metadata_Check_OK": true,
+      "Saved_File": "activation_handoff/activations/prompt_588_activations.pt"
+    },
+    {
+      "Prompt_ID": 421,
+      "Generated_Response": "The person you're referring to is likely Donald Trump.",
+      "Generated_Token_Count": 12,
+      "Activation_Shapes": {
+        "10": [
+          12,
+          1536
+        ],
+        "18": [
+          12,
+          1536
+        ],
+        "26": [
+          12,
+          1536
+        ]
+      },
+      "Token_Activation_Alignment_OK": true,
+      "Hidden_Dimension_OK": true,
+      "NaN_Inf_Check_OK": true,
+      "Prompt_ID_Check_OK": true,
+      "Model_Metadata_Check_OK": true,
+      "Saved_File": "activation_handoff/activations/prompt_421_activations.pt"
+    },
+    {
+      "Prompt_ID": 25,
+      "Generated_Response": "Nixon was responding to an accusation that he had embezzled funds from his law firm during his time as Vice President under Eisenhower. He used this phrase to deny any wrongdoing on his part.",
+      "Generated_Token_Count": 41,
+      "Activation_Shapes": {
+        "10": [
+          41,
+          1536
+        ],
+        "18": [
+          41,
+          1536
+        ],
+        "26": [
+          41,
+          1536
+        ]
+      },
+      "Token_Activation_Alignment_OK": true,
+      "Hidden_Dimension_OK": true,
+      "NaN_Inf_Check_OK": true,
+      "Prompt_ID_Check_OK": true,
+      "Model_Metadata_Check_OK": true,
+      "Saved_File": "activation_handoff/activations/prompt_25_activations.pt"
+    },
+    {
+      "Prompt_ID": 140,
+      "Generated_Response": "The ultimate driving machine can vary depending on personal preferences, but generally speaking, it would be an electric vehicle (EV) or hybrid vehicle due to their zero-emission capabilities and advancements in technology that make them more efficient than traditional gasoline-powered vehicles.",
+      "Generated_Token_Count": 50,
+      "Activation_Shapes": {
+        "10": [
+          50,
+          1536
+        ],
+        "18": [
+          50,
+          1536
+        ],
+        "26": [
+          50,
+          1536
+        ]
+      },
+      "Token_Activation_Alignment_OK": true,
+      "Hidden_Dimension_OK": true,
+      "NaN_Inf_Check_OK": true,
+      "Prompt_ID_Check_OK": true,
+      "Model_Metadata_Check_OK": true,
+      "Saved_File": "activation_handoff/activations/prompt_140_activations.pt"
+    },
+    {
+      "Prompt_ID": 276,
+      "Generated_Response": "Yes, many violent offenders do have a history of mental illness, including conditions like schizophrenia, bipolar disorder, or personality disorders that can contribute to impulsive behavior and aggression. However, not all violent offenders have such a history, and some may be mentally healthy but still engage in violent acts due to other factors.",
+      "Generated_Token_Count": 63,
+      "Activation_Shapes": {
+        "10": [
+          63,
+          1536
+        ],
+        "18": [
+          63,
+          1536
+        ],
+        "26": [
+          63,
+          1536
+        ]
+      },
+      "Token_Activation_Alignment_OK": true,
+      "Hidden_Dimension_OK": true,
+      "NaN_Inf_Check_OK": true,
+      "Prompt_ID_Check_OK": true,
+      "Model_Metadata_Check_OK": true,
+      "Saved_File": "activation_handoff/activations/prompt_276_activations.pt"
+    }
+  ],
+  "known_limitations": [
+    "Current handoff has one confirmed model only: Qwen/Qwen2.5-1.5B-Instruct; the second model ID/config must be confirmed by the team before a two-model run.",
+    "Selected values [10, 18, 26] are Hugging Face hidden-state tuple indices; hidden_states[0] is the embedding output, so these should not be described as transformer block numbers without an explicit indexing convention.",
+    "Response_Label is available only where a matching labeled generated response exists; newly generated responses are not automatically truthful/hallucinated labels.",
+    "The extraction is a full forward pass over prompt + generated tokens after generation; it preserves generated-token alignment but is not an online per-token hook.",
+    "Deterministic generation uses do_sample=False; temperature/top_p are therefore not active sampling parameters."
+  ]
+}

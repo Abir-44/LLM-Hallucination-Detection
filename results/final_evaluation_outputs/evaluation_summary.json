@@ -1,0 +1,26 @@
+{
+    "evaluation_type": "Prompt-level held-out evaluation",
+    "train_prompts": 40,
+    "test_prompts": 10,
+    "train_test_prompt_overlap": 0,
+    "test_confusion_matrix": {
+        "TP": 4,
+        "FP": 2,
+        "FN": 1,
+        "TN": 3
+    },
+    "test_metrics": {
+        "accuracy": 0.7,
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727273
+    },
+    "warnings": 6,
+    "average_warning_fraction": 0.6100193107546048,
+    "limitations": [
+        "Only 10 held-out test prompts were used.",
+        "Scaler, PCA, and KMeans were fitted using all 50 prompts before this split.",
+        "Therefore, this is not a fully leakage-free end-to-end evaluation.",
+        "Results are preliminary and should not be generalized."
+    ]
+}

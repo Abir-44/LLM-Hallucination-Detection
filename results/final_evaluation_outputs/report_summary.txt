@@ -1,0 +1,31 @@
+
+## Held-out Evaluation
+
+The dataset was split at the prompt level into 40 training prompts and
+10 test prompts. Both sets were balanced across the two response labels,
+and there was no prompt overlap.
+
+Sequential patterns were mined using only the training prompts from
+Layer 26. The resulting pattern library was evaluated on the 10 held-out
+test prompts.
+
+Test results:
+- True Positives: 4
+- False Positives: 2
+- False Negatives: 1
+- True Negatives: 3
+- Accuracy: 0.700
+- Precision: 0.667
+- Recall: 0.800
+- F1-score: 0.727
+
+The average warning fraction was 0.610.
+This means warnings were raised, on average, after this fraction of the
+generated activation-state sequence had been observed.
+
+Limitations:
+The test set contains only 10 prompts, so the metrics are preliminary.
+Also, scaling, PCA, and KMeans discretization were fitted using all
+50 prompts before the train-test split. Therefore, this is a held-out
+evaluation of pattern mining and warning matching conditional on the
+existing discretization, not a fully leakage-free end-to-end evaluation.

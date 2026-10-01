@@ -1,0 +1,15 @@
+{
+    "number_of_prompts": 50,
+    "selected_layers": [
+        10,
+        18,
+        26
+    ],
+    "original_dimension": 1536,
+    "pca_components": 876,
+    "explained_variance": 0.9500687122344971,
+    "k": 12,
+    "silhouette_score": 0.33509838581085205,
+    "total_activation_vectors": 7659,
+    "total_sequences": 150
+}

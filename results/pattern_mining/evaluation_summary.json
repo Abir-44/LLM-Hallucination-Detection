@@ -1,0 +1,18 @@
+{
+    "layer_used": 26,
+    "total_responses": 50,
+    "truthful_responses": 25,
+    "hallucinated_responses": 25,
+    "final_pattern_count": 182,
+    "accuracy": 0.66,
+    "precision": 0.6333333333333333,
+    "recall": 0.76,
+    "f1_score": 0.6909090909090909,
+    "true_negative": 14,
+    "false_positive": 11,
+    "false_negative": 6,
+    "true_positive": 19,
+    "average_warning_fraction": 0.39088432282913105,
+    "evaluation_type": "proof-of-concept / in-sample",
+    "limitation": "Patterns were discovered and evaluated on the same 50 responses; therefore these metrics are not an unbiased estimate of generalization performance."
+}

@@ -1,0 +1,5 @@
+Method,Accuracy,Precision,Recall,F1
+Sequential Pattern Mining (Proposed),70.0,66.7,80.0,72.7
+Logistic Regression,70.0,66.7,80.0,72.7
+Random Forest,70.0,100.0,40.0,57.1
+SVM,60.0,60.0,60.0,60.0
